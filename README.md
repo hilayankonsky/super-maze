@@ -1,6 +1,6 @@
-# [Game name]
+# [Super Game]
 
-**Team:** [Name 1] · [Name 2] · [Name 3]
+**Team:** Lior Zahavi · Hila Yankonsky
 **Course:** Mobile Game Development, Shenkar
 
 ## The game in one sentence
