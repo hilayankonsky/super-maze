@@ -4,7 +4,7 @@
 **Course:** Mobile Game Development, Shenkar
 
 ## The game in one sentence
-[What does the player do, and why do they come back tomorrow?]
+Race through a supermarket maze to collect your shopping list and reach the checkout before time runs out, then return to beat your time, earn three stars, and unlock the next challenge.
 
 ## How to open and build
 1. Open the project in Unity 6 LTS (the exact version is on Moodle).
