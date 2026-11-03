@@ -1,23 +1,32 @@
-# Pitch: [Game name]
+# Pitch: [Super Maze]
 
 Keep it to one page. Short answers are fine.
 
 ## Core loop
-What does the player do again and again, with one thumb?
+Grab your shopping list and race through a supermarket maze before time runs out! 
+Move using a virtual joystick with one thumb and collect items by approaching or touching them. Choose your route, dodge shoppers blocking the aisles, deal with falling products and power outages, and reach the checkout with everything on your list.
 
 ## Meta
-What do they earn, spend and unlock?
+Finish a level to unlock the next one and earn 1–3 stars based on your completion time. Three stars award more coins, two stars award fewer coins, and one star lets you move on without a coin reward.
+Spend your coins in the bonus shop to buy extra time, start a level with one item already collected, or get an extra life.
+You have three lives across all levels. Each failed attempt costs one life, and each lost life takes about five minutes to recharge. If you run out, wait for a life to recharge or buy a life from the store with the coins you earned.
 
 ## Why come back?
-Which 2 hooks bring players back tomorrow? (daily reward, streak, event, lives, collection, notification…)
+Chase three stars by returning to beat your previous time and earn coins for your next bonus. Once a life recharges, jump back in to beat the level that stopped you and unlock the next challenge!
 
 ## Who and when
-Who plays it, where, and how long is one session? (target: 1–3 minutes)
+Super Maze is for players who enjoy navigating mazes and completing tasks against the clock. It is ideal for a short break, while waiting, or whenever you have a few minutes to spare. Each session lasts 2–3 minutes.
 
 ## Feel
-What will feel "crunchy"? (sound, motion, particles, haptics, timing, numbers)
+Follow the mini-map towards your next item, keeping an eye on the obstacles along the way. Each pickup rewards you with a satisfying sound and another check mark on your list, bringing you closer to the checkout. But bump into an obstacle and you will be dizzy for three seconds, watching precious time slip away. With your list complete, race to the checkout as the ticking sound adds pressure during those final seconds. A cash register sound marks the end of the level.
 
 ## Scope check
+Hybrid-casual: simple movement and collection, with coins, bonuses, and level progression.
+Portrait, one thumb: virtual joystick movement and automatic item collection.
+2–3 minute sessions.
+Three levels with shopping lists, a timer, and star ratings.
+A coin system, bonus shop, and three lives that recharge. 
+Three obstacle types: blocking shoppers, falling products, and power outages.
 - [ ] Hybrid-casual: simple core + a meta layer
 - [ ] Portrait, one thumb
 - [ ] 1–3 minute sessions
