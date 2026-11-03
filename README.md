@@ -1,4 +1,4 @@
-# [Super Game]
+# [Super Maze]
 
 **Team:** Lior Zahavi · Hila Yankonsky
 **Course:** Mobile Game Development, Shenkar
