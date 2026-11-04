@@ -15,15 +15,12 @@ You have three lives across all levels. Each failed attempt costs one life, and 
 Chase three stars by returning to beat your previous time and earn coins for your next bonus. Once a life recharges, jump back in to beat the level that stopped you and unlock the next challenge!
 
 ## Who and when
-Super Maze is for players who enjoy navigating mazes and completing tasks against the clock. It is ideal for a short break, while waiting, or whenever you have a few minutes to spare. Each session lasts 2–3 minutes.
+Super Maze is for players who enjoy navigating mazes and completing tasks against the clock. It is ideal for a short break, while waiting, or whenever you have a few minutes to spare. Each session lasts 1–2.5 minutes.
 
 ## Feel
 Follow the mini-map towards your next item, keeping an eye on the obstacles along the way. Each pickup rewards you with a satisfying sound and another check mark on your list, bringing you closer to the checkout. But bump into an obstacle and you will be dizzy for three seconds, watching precious time slip away. With your list complete, race to the checkout as the ticking sound adds pressure during those final seconds. A cash register sound marks the end of the level.
 
 ## Scope check
-Hybrid-casual: simple movement and collection, with coins, bonuses, and level progression.
-Portrait, one thumb: virtual joystick movement and automatic item collection.
-2–3 minute sessions.
 Three levels with shopping lists, a timer, and star ratings.
 A coin system, bonus shop, and three lives that recharge. 
 Three obstacle types: blocking shoppers, falling products, and power outages.
