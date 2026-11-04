@@ -10,7 +10,7 @@ Obstacles such as customers blocking aisles, falling products, and power outages
 
 Players receive 1–3 stars based on their completion time. Completing a level with 3 stars earns more coins than completing it with 2 stars, while 1 star allows progression without a coin reward.
 
-Coins can be spent on power-ups, including extra time, automatically collecting an item at the beginning of a level, and additional lives.
+Coins can be used to purchase power-ups before starting a level. Players choose whether and when to use them. Power-ups include extra time, an automatically collected item at the beginning of a level, and an additional attempt after failure.
 
 The player has a shared pool of 3 lives across all levels. Failed attempts consume lives, which regenerate over time.
 
