@@ -1,7 +1,5 @@
 # Pitch: [Super Maze]
 
-Keep it to one page. Short answers are fine.
-
 ## Core loop
 Grab your shopping list and race through a supermarket maze before time runs out! 
 Move using a virtual joystick with one thumb and collect items by approaching or touching them. Choose your route, dodge shoppers blocking the aisles, deal with falling products and power outages, and reach the checkout with everything on your list.
