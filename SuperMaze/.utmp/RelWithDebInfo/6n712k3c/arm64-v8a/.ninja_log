@@ -1,0 +1,12 @@
+# ninja log v5
+139	500	8160347542405098	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	3709c3b4863fb1e4
+505	1065	8160347546286410	C:/Users/1000l/OneDrive/Desktop/Shenkar/2026-2027/mobile games/super-maze/SuperMaze/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6n712k3c/obj/arm64-v8a/libswappywrapper.so	8328d8f2cd8c2350
+48	3882	8160347575951030	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4f3be5b310aff146
+16	4001	8160347577374713	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	405df322e3801933
+97	4064	8160347578128778	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c3ca3a0dfa9be93
+78	4140	8160347578583286	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	24221fd0db629555
+1	4262	8160347580168439	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	bb666be1985a98c9
+116	4369	8160347580959643	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c923a6b4b41fdcfc
+64	4897	8160347586434696	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	30d11961582225a3
+32	5072	8160347588240731	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	7fadd1e1fc6d3672
+5072	5258	8160347590120894	C:/Users/1000l/OneDrive/Desktop/Shenkar/2026-2027/mobile games/super-maze/SuperMaze/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6n712k3c/obj/arm64-v8a/libgame.so	a23396d5216b88c2
