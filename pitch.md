@@ -1,4 +1,4 @@
-# Pitch: [Super Maze]
+# Pitch: Super Maze
 
 ## Core loop
 Grab your shopping list and race through a supermarket maze before time runs out! 
@@ -14,6 +14,13 @@ Chase three stars by returning to beat your previous time and earn coins for you
 
 ## Who and when
 Super Maze is for players who enjoy navigating mazes and completing tasks against the clock. It is ideal for a short break, while waiting, or whenever you have a few minutes to spare. Each session lasts 1–2.5 minutes.
+
+## Goals
+- Collect an item and check it off the shopping list.
+- Complete the shopping list and reach the checkout before time runs out.
+- Finish a level and unlock the next one.
+- Improve your completion time to earn more stars and more coins.
+- Earn enough coins to purchase a bonus that helps with a future attempt.
 
 ## Feel
 Follow the mini-map towards your next item, keeping an eye on the obstacles along the way. Each pickup rewards you with a satisfying sound and another check mark on your list, bringing you closer to the checkout. But bump into an obstacle and you will be dizzy for three seconds, watching precious time slip away. With your list complete, race to the checkout as the ticking sound adds pressure during those final seconds. A cash register sound marks the end of the level.
