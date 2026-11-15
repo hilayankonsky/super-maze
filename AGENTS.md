@@ -21,18 +21,44 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 - Engine: Unity 6 LTS
 - Programming language: C#
 - Target: Mobile, portrait orientation
-- Final target platforms: To be decided
-- Packages and services: To be added as development progresses
-
+- Final target platforms: Android, ios
+- orientation: Portrait
+- UI: Unity UI (uGUI) and TextMeshPro
+- Input: Unity Input System
+- 
 ## Architecture
 
-To be defined during development.
+### Scenes and initialization
 
-Document the following as they are implemented:
-- Game scenes
-- Main gameplay systems
-- Configuration and data storage
-- Initialization order
+- Scenes are stored in Assets/Scenes.
+- Bootstrap is the first scene in the Scene List.
+- Bootstrap creates the save service before loading Home:
+  Services.Save = new PlayerPrefsSaveService();
+- The Bootstrap GameObject uses DontDestroyOnLoad to survive scene changes.
+- Home and Level use ScreenFlow for navigation.
+- Normal navigation must not reload Bootstrap.
+
+### Services and saving
+
+- Service code is stored in Assets/Scripts/Services.
+- ISaveService defines the saving interface: GetInt and SetInt.
+- PlayerPrefsSaveService implements ISaveService using PlayerPrefs.
+- Services exposes the active save service through Services.Save.
+- Game and UI scripts access saved data through Services.Save.
+- Direct PlayerPrefs access belongs inside the save service implementation.
+- CoinCounter displays and updates the saved coin count.
+
+### Assemblies
+
+- Game code is stored in Assets/Scripts/Game.
+- Game.asmdef references Services, Unity.TextMeshPro and Unity.InputSystem.
+- Services.asmdef does not reference Game.
+- Services must not depend on gameplay or UI classes.
+
+### Current scope
+
+- The save service is implemented.
+- A second service is planned and must be documented here once implemented.
 
 ## Rules for AI
 
@@ -47,6 +73,17 @@ Document the following as they are implemented:
 
 ## Conventions
 
-To be defined by the team as development progresses.
+- Follow the existing C# naming and formatting style.
+- Put gameplay and UI scripts in Assets/Scripts/Game.
+- Put service interfaces and implementations in Assets/Scripts/Services.
+- Preserve Unity .meta files when moving or renaming assets.
+- Update this document when the architecture changes.
 
-Follow existing naming conventions, code style, and project structure once established.
+## Validation
+
+- Start the game through Bootstrap and verify that Home opens.
+- Verify that the Console has no errors.
+- Verify navigation from Home to Level and back.
+- Verify that adding coins updates the display.
+- On Android, close and reopen the app and verify that coins persist.
+- Report which checks were performed and which were not.
