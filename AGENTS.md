@@ -25,7 +25,7 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 - orientation: Portrait
 - UI: Unity UI (uGUI) and TextMeshPro
 - Input: Unity Input System
-- 
+  
 ## Architecture
 
 ### Scenes and initialization
