@@ -1,4 +1,4 @@
-# [Super Maze]
+# Super Maze
 
 **Team:** Lior Zahavi · Hila Yankonsky
 **Course:** Mobile Game Development, Shenkar
@@ -9,9 +9,11 @@ Race through a supermarket maze to collect your shopping list and reach the chec
 
 ## How to open and build
 
-1. Open the project in Unity 6 LTS (the exact version is on Moodle).
-2. File → Build Profiles → Android → Switch Platform.
-3. Build and run on an Android phone.
+1. Open the Unity project using the editor version specified in ProjectSettings/ProjectVersion.txt.
+2. To test in the Editor, open Assets/Scenes/Bootstrap.unity and press Play.
+3. To build for Android, go to File → Build Profiles, select Android, and switch to that platform.
+4. Ensure Bootstrap is the first enabled scene in the Scene List, followed by Home and Level.
+5. Connect an Android phone with USB debugging enabled, select it, and choose Build And Run.
 
 ## Repo map
 
