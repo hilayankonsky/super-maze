@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 279764392}
   - component: {fileID: 279764391}
   - component: {fileID: 279764390}
-  - component: {fileID: 279764393}
+  - component: {fileID: 279764394}
   m_Layer: 5
   m_Name: HomeButton
   m_TagString: Untagged
@@ -994,9 +994,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 279764393}
-        m_TargetAssemblyTypeName: HomeButtonHandler, Assembly-CSharp
-        m_MethodName: GoHome
+      - m_Target: {fileID: 279764394}
+        m_TargetAssemblyTypeName: ScreenFlow, Game
+        m_MethodName: Back
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1044,7 +1044,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 279764388}
   m_CullTransparentMesh: 1
---- !u!114 &279764393
+--- !u!114 &279764394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1053,9 +1053,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 279764388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6f0f1706dfaf4a4689cb1b156fa8481, type: 3}
+  m_Script: {fileID: 11500000, guid: ef8e234933038e34e8c2af32206a4000, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HomeButtonHandler
+  m_EditorClassIdentifier: Game::ScreenFlow
 --- !u!1 &358914521
 GameObject:
   m_ObjectHideFlags: 0
