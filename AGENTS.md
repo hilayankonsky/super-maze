@@ -34,6 +34,8 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 - Bootstrap is the application entry scene. Its Services GameObject has the Bootstrap component and uses DontDestroyOnLoad to survive scene changes.
 - Bootstrap creates the save service first, then loads Home:
   Services.Save = new PlayerPrefsSaveService();
+- Bootstrap then creates SettingsService with Services.Save before loading Home:
+  Services.Settings = new SettingsService(Services.Save);
 - Home is the current menu and level-selection screen.
 - Level is the current gameplay UI and supermarket layout screen.
 - level1 is a separate supermarket-layout prototype and is not in the Scene List.
@@ -52,11 +54,13 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 - Direct PlayerPrefs access belongs only inside PlayerPrefsSaveService.
 - CoinCounter displays and updates the persistent saved coin count.
 - DailyReward stores its last claimed UTC day through Services.Save and grants 50 coins once per UTC day.
+- ISettingsService exposes the saved VibrationOn setting. SettingsService reads and writes it through ISaveService and never accesses PlayerPrefs directly.
+- Services exposes the active settings service through Services.Settings.
 
 ### Assemblies and script locations
 
 - The Game assembly is defined in Assets/Scripts/Game/Game.asmdef, and its scripts are stored in Assets/Scripts/Game.
-- ScreenFlow, Bootstrap, CoinCounter and DailyReward are in the Game assembly.
+- ScreenFlow, Bootstrap, CoinCounter, DailyReward and SettingsPanelController are in the Game assembly.
 - LevelPopupController and SafeAreaFitter currently remain directly under Assets/Scripts and compile into the predefined Assembly-CSharp assembly.
 - Service interfaces and implementations are stored in Assets/Scripts/Services and compile into the Services assembly.
 - Game.asmdef references Services, Unity.TextMeshPro and Unity.InputSystem.
@@ -65,9 +69,10 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 
 ## Implementation status
 
-- Implemented: Bootstrap-first startup, PlayerPrefs-backed integer saving through ISaveService, persistent coins, the daily reward, the Home level-selection popup, safe-area fitting, and navigation between Home and Level through ScreenFlow.
+- Implemented: Bootstrap-first startup, PlayerPrefs-backed integer saving through ISaveService, persistent coins, the daily reward, saved vibration settings, the Home settings panel, the Home level-selection popup, safe-area fitting, and navigation between Home and Level through ScreenFlow.
 - Present as UI or scene layout but not yet implemented as complete gameplay: player movement and virtual joystick input, shopping-list item collection, checkout completion, the level timer, stars and performance rewards, level progression, obstacles, power-ups, lives and life regeneration, and failure/retry handling.
-- The second service is planned but is not implemented yet. Document it here when it is implemented.
+- The second service is SettingsService, exposed through ISettingsService and Services.Settings.
+- Vibration on successful level completion remains planned because functional level-completion logic is not implemented yet.
 
 ## Rules for AI
 
