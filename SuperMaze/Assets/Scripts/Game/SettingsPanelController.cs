@@ -43,5 +43,13 @@ public class SettingsPanelController : MonoBehaviour
 
     void Close() => panelRoot.SetActive(false);
 
-    void SetVibration(bool enabled) => Services.Settings.VibrationOn = enabled;
+    void SetVibration(bool enabled)
+    {
+        Services.Settings.VibrationOn = enabled;
+
+        if (enabled)
+        {
+            Handheld.Vibrate();
+        }
+    }
 }
