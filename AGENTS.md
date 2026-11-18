@@ -54,8 +54,13 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 - Direct PlayerPrefs access belongs only inside PlayerPrefsSaveService.
 - CoinCounter displays and updates the persistent saved coin count.
 - DailyReward stores its last claimed UTC day through Services.Save and grants 50 coins once per UTC day.
-- ISettingsService exposes the saved VibrationOn setting. SettingsService reads and writes it through ISaveService and never accesses PlayerPrefs directly.
+- ISettingsService exposes the saved VibrationOn and SoundOn settings. SettingsService reads and writes them through ISaveService and never accesses PlayerPrefs directly. Both settings default to on when no saved value exists.
 - Services exposes the active settings service through Services.Settings.
+- The Home settings toggles reflect the saved VibrationOn and SoundOn values without notifying their change listeners during initialization or when the panel opens.
+- User toggle changes are saved through Services.Settings. Switching vibration from off to on calls Handheld.Vibrate once; switching it off does not vibrate.
+- The Home Sound toggle controls a looping AudioSource outside the settings panel so playback can continue after the panel closes. Sound on plays an assigned clip and sound off stops it.
+- Home music playback awaits an AudioClip assigned to the HomeMusic AudioSource in the Inspector. With no clip assigned, SoundOn still saves and loads without playback errors or warnings.
+- The Home settings UI is a centered cream popup with a wooden frame, gold trim, navy header, labeled Vibration and Sound rows, animated pill switches, X and Done close buttons, and a dimming click blocker. It is saved as editable uGUI and TextMeshPro objects under SafeArea and uses a short interruptible fade/slide transition.
 
 ### Assemblies and script locations
 
@@ -69,10 +74,9 @@ The game is designed for short sessions, with a 2-minute time limit per level th
 
 ## Implementation status
 
-- Implemented: Bootstrap-first startup, PlayerPrefs-backed integer saving through ISaveService, persistent coins, the daily reward, saved vibration settings, the Home settings panel, the Home level-selection popup, safe-area fitting, and navigation between Home and Level through ScreenFlow.
+- Implemented: Bootstrap-first startup, PlayerPrefs-backed integer saving through ISaveService, persistent coins, the daily reward, saved vibration and sound settings, one-time vibration feedback when enabled from the Home toggle, Home-only looping music control awaiting an assigned clip, the Home settings panel, the Home level-selection popup, safe-area fitting, and navigation between Home and Level through ScreenFlow.
 - Present as UI or scene layout but not yet implemented as complete gameplay: player movement and virtual joystick input, shopping-list item collection, checkout completion, the level timer, stars and performance rewards, level progression, obstacles, power-ups, lives and life regeneration, and failure/retry handling.
 - The second service is SettingsService, exposed through ISettingsService and Services.Settings.
-- Vibration on successful level completion remains planned because functional level-completion logic is not implemented yet.
 
 ## Rules for AI
 

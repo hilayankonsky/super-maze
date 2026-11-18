@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: af733c9c6e14895448b0b557640cc84a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -449711391868417356
+    second: SoundSpeakerIcon_0
+  - first:
+      213: 4161355553693479931
+    second: SoundSpeakerIcon_1
+  - first:
+      213: 6301502435890651557
+    second: SoundSpeakerIcon_2
+  - first:
+      213: 3068557752786729050
+    second: SoundSpeakerIcon_3
+  - first:
+      213: -6246689793825265541
+    second: SoundSpeakerIcon_4
+  - first:
+      213: -3572237518354511654
+    second: SoundSpeakerIcon_5
+  - first:
+      213: -4174414510227085406
+    second: SoundSpeakerIcon_6
+  - first:
+      213: 3315265442452177727
+    second: SoundSpeakerIcon_7
+  - first:
+      213: -5708778760191272581
+    second: SoundSpeakerIcon_8
+  - first:
+      213: 8506604255436983319
+    second: SoundSpeakerIcon_9
+  - first:
+      213: -7811611075548573678
+    second: SoundSpeakerIcon_10
+  - first:
+      213: -7550392447222669978
+    second: SoundSpeakerIcon_11
+  - first:
+      213: -6513867065411029828
+    second: SoundSpeakerIcon_12
+  - first:
+      213: 528420820543017806
+    second: SoundSpeakerIcon_13
+  - first:
+      213: -6080366539384895510
+    second: SoundSpeakerIcon_14
+  - first:
+      213: -4637318613547999820
+    second: SoundSpeakerIcon_15
+  - first:
+      213: 8901662165652853636
+    second: SoundSpeakerIcon_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 47
+        width: 913
+        height: 1127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba8c3c2fdd42c9f0800000000000000
+      internalID: -449711391868417356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_1
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1038
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3bff904da10c930800000000000000
+      internalID: 4161355553693479931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_2
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1036
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a16582241f637750800000000000000
+      internalID: 6301502435890651557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1028
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58bf9ba405b59a20800000000000000
+      internalID: 3068557752786729050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_4
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1030
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b78acf89abc4f49a0800000000000000
+      internalID: -6246689793825265541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_5
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 836
+        width: 230
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8082157ecdc6ec0800000000000000
+      internalID: -3572237518354511654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_6
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 932
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7ada4be108116c0800000000000000
+      internalID: -4174414510227085406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_7
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 929
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f338d79da50320e20800000000000000
+      internalID: 3315265442452177727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_8
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 130
+        width: 313
+        height: 781
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b791189c6f756c0b0800000000000000
+      internalID: -5708778760191272581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_9
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 899
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71cc52a10878d0670800000000000000
+      internalID: 8506604255436983319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_10
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 885
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2109b6e4d15979390800000000000000
+      internalID: -7811611075548573678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_11
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 794
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66d108ca21e973790800000000000000
+      internalID: -7550392447222669978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_12
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 399
+        width: 161
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb43f0c7a681a95a0800000000000000
+      internalID: -6513867065411029828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_13
+      rect:
+        serializedVersion: 2
+        x: 1159
+        y: 787
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e431364cfe3555700800000000000000
+      internalID: 528420820543017806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 778
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7cacbf8d23e9ba0800000000000000
+      internalID: -6080366539384895510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_15
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 355
+        width: 110
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd1a216a4fe4afb0800000000000000
+      internalID: -4637318613547999820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SoundSpeakerIcon_16
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 235
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483d54e939e098b70800000000000000
+      internalID: 8901662165652853636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SoundSpeakerIcon_0: -449711391868417356
+      SoundSpeakerIcon_1: 4161355553693479931
+      SoundSpeakerIcon_10: -7811611075548573678
+      SoundSpeakerIcon_11: -7550392447222669978
+      SoundSpeakerIcon_12: -6513867065411029828
+      SoundSpeakerIcon_13: 528420820543017806
+      SoundSpeakerIcon_14: -6080366539384895510
+      SoundSpeakerIcon_15: -4637318613547999820
+      SoundSpeakerIcon_16: 8901662165652853636
+      SoundSpeakerIcon_2: 6301502435890651557
+      SoundSpeakerIcon_3: 3068557752786729050
+      SoundSpeakerIcon_4: -6246689793825265541
+      SoundSpeakerIcon_5: -3572237518354511654
+      SoundSpeakerIcon_6: -4174414510227085406
+      SoundSpeakerIcon_7: 3315265442452177727
+      SoundSpeakerIcon_8: -5708778760191272581
+      SoundSpeakerIcon_9: 8506604255436983319
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
