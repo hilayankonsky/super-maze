@@ -36,3 +36,7 @@ Race through a supermarket maze to collect your shopping list and reach the chec
 ### iPhone X — notched display
 
 ![Super Maze on iPhone X](media/iphoneX.png)
+
+## Architecture Diagram
+
+![Super Maze Architecture Diagram](media/architecture-diagram.png)
