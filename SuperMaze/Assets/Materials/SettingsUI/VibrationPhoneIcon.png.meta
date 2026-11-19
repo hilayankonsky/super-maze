@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: a8d3f33e5be532644995db64adf31329
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -444134683725395291
+    second: VibrationPhoneIcon_0
+  - first:
+      213: -1156933998229911
+    second: VibrationPhoneIcon_1
+  - first:
+      213: -6717935564263983916
+    second: VibrationPhoneIcon_2
+  - first:
+      213: -1403658837357593939
+    second: VibrationPhoneIcon_3
+  - first:
+      213: 345027060656713310
+    second: VibrationPhoneIcon_4
+  - first:
+      213: 7058885013687096995
+    second: VibrationPhoneIcon_5
+  - first:
+      213: -7205731234607520974
+    second: VibrationPhoneIcon_6
+  - first:
+      213: -5435246841492291261
+    second: VibrationPhoneIcon_7
+  - first:
+      213: -7074811331528184998
+    second: VibrationPhoneIcon_8
+  - first:
+      213: -3714619531668755677
+    second: VibrationPhoneIcon_9
+  - first:
+      213: 6481777371938549272
+    second: VibrationPhoneIcon_10
+  - first:
+      213: 99930896157374378
+    second: VibrationPhoneIcon_11
+  - first:
+      213: 6316664064411724474
+    second: VibrationPhoneIcon_12
+  - first:
+      213: -1723827634747009160
+    second: VibrationPhoneIcon_13
+  - first:
+      213: 4955674177092621639
+    second: VibrationPhoneIcon_14
+  - first:
+      213: 8768383759847794534
+    second: VibrationPhoneIcon_15
+  - first:
+      213: 8215363068952344271
+    second: VibrationPhoneIcon_16
+  - first:
+      213: -3671518723383405419
+    second: VibrationPhoneIcon_17
+  - first:
+      213: 1161591359282195416
+    second: VibrationPhoneIcon_18
+  - first:
+      213: -7515050098117385513
+    second: VibrationPhoneIcon_19
+  - first:
+      213: -3050234686567292168
+    second: VibrationPhoneIcon_20
+  - first:
+      213: 5864886590366378437
+    second: VibrationPhoneIcon_21
+  - first:
+      213: 1492849352862891315
+    second: VibrationPhoneIcon_22
+  - first:
+      213: -6413274942059220200
+    second: VibrationPhoneIcon_23
+  - first:
+      213: 6842839556498215851
+    second: VibrationPhoneIcon_24
+  - first:
+      213: -8332108942591788487
+    second: VibrationPhoneIcon_25
+  - first:
+      213: -3183534592747375517
+    second: VibrationPhoneIcon_26
+  - first:
+      213: 4248928784968613382
+    second: VibrationPhoneIcon_27
+  - first:
+      213: 3583264264881362981
+    second: VibrationPhoneIcon_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 343
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa0e18bbdd16d9f0800000000000000
+      internalID: -444134683725395291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 481
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 966c10056c3ebfff0800000000000000
+      internalID: -1156933998229911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 1070
+        height: 1236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4f41c823915c2a0800000000000000
+      internalID: -6717935564263983916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 425
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa767d69b3358ce0800000000000000
+      internalID: -1403658837357593939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 337
+        width: 64
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e275c9848c9c400800000000000000
+      internalID: 345027060656713310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_5
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 288
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6d527358236f160800000000000000
+      internalID: 7058885013687096995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_6
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 121
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2332846ae99100c90800000000000000
+      internalID: -7205731234607520974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_7
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 117
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341c94a7bcf1294b0800000000000000
+      internalID: -5435246841492291261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_8
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 109
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5baa53f39831dd90800000000000000
+      internalID: -7074811331528184998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 118
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32be7238735037cc0800000000000000
+      internalID: -3714619531668755677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_10
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 128
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81eef878d26e3f950800000000000000
+      internalID: 6481777371938549272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_11
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 85
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7fb8fde96036100800000000000000
+      internalID: 99930896157374378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_12
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 65
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba6cbcdf7c49a750800000000000000
+      internalID: 6316664064411724474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_13
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 101
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87717e046ebb318e0800000000000000
+      internalID: -1723827634747009160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_14
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 69
+        width: 41
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7459e24686716c440800000000000000
+      internalID: 4955674177092621639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_15
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 75
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667280c929e8fa970800000000000000
+      internalID: 8768383759847794534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_16
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 59
+        width: 57
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc674c13f25d20270800000000000000
+      internalID: 8215363068952344271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_17
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 85
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59459827c252c0dc0800000000000000
+      internalID: -3671518723383405419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_18
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 65
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dbad28df2dce1010800000000000000
+      internalID: 1161591359282195416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_19
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 77
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2e27090cd25b790800000000000000
+      internalID: -7515050098117385513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_20
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 85
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2e491a6b36ba5d0800000000000000
+      internalID: -3050234686567292168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_21
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 63
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c96dbac743446150800000000000000
+      internalID: 5864886590366378437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_22
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 63
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33d7094b39aa7b410800000000000000
+      internalID: 1492849352862891315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_23
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 63
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81375af4b687ff6a0800000000000000
+      internalID: -6413274942059220200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_24
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 20
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3511c5256a6fe50800000000000000
+      internalID: 6842839556498215851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_25
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 31
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93af5f6ef076e5c80800000000000000
+      internalID: -8332108942591788487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_26
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 30
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364ff1da720d1d3d0800000000000000
+      internalID: -3183534592747375517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_27
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 27
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e7cf7d73a37fa30800000000000000
+      internalID: 4248928784968613382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VibrationPhoneIcon_28
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 31
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528da9c2ddf4ab130800000000000000
+      internalID: 3583264264881362981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      VibrationPhoneIcon_0: -444134683725395291
+      VibrationPhoneIcon_1: -1156933998229911
+      VibrationPhoneIcon_10: 6481777371938549272
+      VibrationPhoneIcon_11: 99930896157374378
+      VibrationPhoneIcon_12: 6316664064411724474
+      VibrationPhoneIcon_13: -1723827634747009160
+      VibrationPhoneIcon_14: 4955674177092621639
+      VibrationPhoneIcon_15: 8768383759847794534
+      VibrationPhoneIcon_16: 8215363068952344271
+      VibrationPhoneIcon_17: -3671518723383405419
+      VibrationPhoneIcon_18: 1161591359282195416
+      VibrationPhoneIcon_19: -7515050098117385513
+      VibrationPhoneIcon_2: -6717935564263983916
+      VibrationPhoneIcon_20: -3050234686567292168
+      VibrationPhoneIcon_21: 5864886590366378437
+      VibrationPhoneIcon_22: 1492849352862891315
+      VibrationPhoneIcon_23: -6413274942059220200
+      VibrationPhoneIcon_24: 6842839556498215851
+      VibrationPhoneIcon_25: -8332108942591788487
+      VibrationPhoneIcon_26: -3183534592747375517
+      VibrationPhoneIcon_27: 4248928784968613382
+      VibrationPhoneIcon_28: 3583264264881362981
+      VibrationPhoneIcon_3: -1403658837357593939
+      VibrationPhoneIcon_4: 345027060656713310
+      VibrationPhoneIcon_5: 7058885013687096995
+      VibrationPhoneIcon_6: -7205731234607520974
+      VibrationPhoneIcon_7: -5435246841492291261
+      VibrationPhoneIcon_8: -7074811331528184998
+      VibrationPhoneIcon_9: -3714619531668755677
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
