@@ -5,7 +5,9 @@
 
 ## The game in one sentence
 
-Race through a supermarket maze to collect your shopping list and reach the checkout before time runs out, then return to beat your time, earn three stars, and unlock the next challenge.
+Race through a supermarket maze to collect your shopping list and reach the checkout before time runs out, then return to beat your best rating, earn three stars, upgrade your gear, and unlock the next challenge.
+
+Most gameplay is designed but not yet implemented. See `AGENTS.md` for the confirmed design and the current implementation status.
 
 ## How to open and build
 
