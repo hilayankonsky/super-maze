@@ -5793,6 +5793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Game::LevelGameManager
   levelDuration: 120
   timerText: {fileID: 1488530276}
+  endGameOverlay: {fileID: 1868098200}
   winPanel: {fileID: 619079260}
   losePanel: {fileID: 855706911}
   completionTimeText: {fileID: 863195080}
@@ -5800,6 +5801,7 @@ MonoBehaviour:
   star2: {fileID: 472421463}
   star3: {fileID: 1751803889}
   rewardText: {fileID: 159736924}
+  levelId: 1
 --- !u!4 &1731743319
 Transform:
   m_ObjectHideFlags: 0
@@ -6432,7 +6434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1868098201
 RectTransform:
   m_ObjectHideFlags: 0

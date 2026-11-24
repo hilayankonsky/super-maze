@@ -11,6 +11,7 @@ public class LevelGameManager : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
 
     [Header("End Game UI")]
+    [SerializeField] private GameObject endGameOverlay;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
     [SerializeField] private TMP_Text completionTimeText;
@@ -23,14 +24,19 @@ public class LevelGameManager : MonoBehaviour
 
     private float timeRemaining;
     private bool gameEnded;
+    private EconomyConfig economy;
+    [SerializeField] private int levelId = 1;
 
     private void Start()
     {
+        economy = Services.Config.Economy;
+
         timeRemaining = levelDuration;
         gameEnded = false;
 
         winPanel.SetActive(false);
         losePanel.SetActive(false);
+        endGameOverlay.SetActive(false);
 
         UpdateTimerText();
     }
@@ -70,43 +76,88 @@ public class LevelGameManager : MonoBehaviour
         timerText.text = $"{minutes:00}:{remainingSeconds:00}";
     }
 
-public void WinLevel()
-{
-    if (gameEnded)
-        return;
+    public void WinLevel()
+    {
+        if (gameEnded)
+            return;
 
-    gameEnded = true;
+        gameEnded = true;
 
-    float completionTime = levelDuration - timeRemaining;
+        float completionTime = levelDuration - timeRemaining;
 
-    int seconds = Mathf.FloorToInt(completionTime);
-    int minutes = seconds / 60;
-    int remainingSeconds = seconds % 60;
+        int seconds = Mathf.FloorToInt(completionTime);
+        int minutes = seconds / 60;
+        int remainingSeconds = seconds % 60;
 
-    completionTimeText.text =
-        $"COMPLETION TIME: {minutes:00}:{remainingSeconds:00}";
+        completionTimeText.text =
+            $"COMPLETION TIME: {minutes:00}:{remainingSeconds:00}";
 
-    // Calculate stars based on completion time
-    int stars;
+        // Calculate stars and rewards using EconomyConfig
+        int stars;
+        int coins;
 
-    if (completionTime <= 40f)
-        stars = 3;
-    else if (completionTime <= 80f)
-        stars = 2;
-    else
-        stars = 1;
+        if (completionTime <= economy.threeStarTime)
+        {
+            stars = 3;
+            coins = economy.threeStarReward;
+        }
+        else if (completionTime <= economy.twoStarTime)
+        {
+            stars = 2;
+            coins = economy.twoStarReward;
+        }
+        else
+        {
+            stars = 1;
+            coins = economy.oneStarReward;
+        }
 
-    // Show the correct number of stars
-    star1.SetActive(stars >= 1);
-    star2.SetActive(stars >= 2);
-    star3.SetActive(stars >= 3);
+        // Show the correct number of stars
+        star1.SetActive(stars >= 1);
+        star2.SetActive(stars >= 2);
+        star3.SetActive(stars >= 3);
 
-    // Calculate coin reward
-    int coins = stars * 40;
-    rewardText.text = $"+{coins} COINS";
+        // Load the best previous result
+        string levelKey = $"level_{levelId}_best_stars";
+        int bestStars = Services.Save.GetInt(levelKey, 0);
 
-    winPanel.SetActive(true);
-}
+        // Calculate the previous reward
+        int previousReward = 0;
+
+        switch (bestStars)
+        {
+            case 1:
+                previousReward = economy.oneStarReward;
+                break;
+
+            case 2:
+                previousReward = economy.twoStarReward;
+                break;
+
+            case 3:
+                previousReward = economy.threeStarReward;
+                break;
+        }
+
+        // Reward only improvements
+        int earnedCoins = 0;
+
+        if (stars > bestStars)
+        {
+            earnedCoins = Mathf.Max(0, coins - previousReward);
+
+            int currentCoins = Services.Save.GetInt("coins");
+
+            Services.Save.SetInt("coins", currentCoins + earnedCoins);
+            Services.Save.SetInt(levelKey, stars);
+        }
+
+        // Display the actual earned reward
+        rewardText.text = $"+{earnedCoins} COINS";
+
+        endGameOverlay.SetActive(true);
+        winPanel.SetActive(true);
+    }
 
     public void LoseLevel()
     {
@@ -114,6 +165,8 @@ public void WinLevel()
             return;
 
         gameEnded = true;
+
+        endGameOverlay.SetActive(true);
         losePanel.SetActive(true);
     }
 
