@@ -177,12 +177,16 @@ Life purchases:
 - User toggle changes are saved through Services.Settings. Switching vibration from off to on calls Handheld.Vibrate once; switching it off does not vibrate.
 - The Home Sound toggle controls a looping AudioSource outside the settings panel so playback can continue after the panel closes. Sound on plays an assigned clip and sound off stops it.
 - Home music playback awaits an AudioClip assigned to the HomeMusic AudioSource in the Inspector. With no clip assigned, SoundOn still saves and loads without playback errors or warnings.
-- The Home settings UI is a centered cream popup with a wooden frame, gold trim, navy header, labeled Vibration and Sound rows, animated pill switches, X and Done close buttons, and a dimming click blocker. It is saved as editable uGUI and TextMeshPro objects under SafeArea and uses a short interruptible fade/slide transition.
+- The Home settings UI is a centered cream popup with a blue frame, yellow trim, a blue SETTINGS header plaque, a red X button, labeled Vibration and Sound rows, blue/grey pill switches with a cream knob, a yellow Done button, and a dimming click blocker. It is saved as editable uGUI and TextMeshPro objects under SafeArea and uses a short interruptible fade/slide transition. Its sprites are in Assets/Materials/SettingsUI (the *Blue, CloseButtonRed and ToggleKnobCream files).
+- The Home screen layout: a cream TopBar (logo slot, coin icon with CoinsText, heart icon with LivesText, and the gear SettingsButton), the Daily gift and +10 buttons below it, side shelves and plants in Decor, the level map in MapArea, a decorative Checkout counter, and a cream BottomBar with Home and Shop. Home screen sprites are in Assets/Materials/HomeUI.
+- LevelMap is a fixed 940x1000 layout inside MapArea. UniformScaleFitter scales it uniformly to fit the space between the top bar and the checkout on any portrait aspect ratio.
+- The yellow capsule on the Home and Shop buttons is shown by PressHighlight only while a finger or mouse is held down on the button. It hides on release or when the finger slides off. It is presentation only and does not affect OnClick.
+- The Logo Image in TopBar is empty until the team's logo file is added. Asset sources are listed in CREDITS.md.
 
 ### Assemblies and script locations
 
 - The Game assembly is defined in Assets/Scripts/Game/Game.asmdef, and its scripts are stored in Assets/Scripts/Game.
-- ScreenFlow, Bootstrap, CoinCounter, DailyReward and SettingsPanelController are in the Game assembly.
+- ScreenFlow, Bootstrap, CoinCounter, DailyReward, SettingsPanelController, PressHighlight and UniformScaleFitter are in the Game assembly.
 - LevelPopupController and SafeAreaFitter currently remain directly under Assets/Scripts and compile into the predefined Assembly-CSharp assembly.
 - Service interfaces and implementations are stored in Assets/Scripts/Services and compile into the Services assembly.
 - Game.asmdef references Services, Unity.TextMeshPro and Unity.InputSystem.
