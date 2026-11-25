@@ -71,6 +71,18 @@ The Home scene uses `YellowButton.png` from this folder for Daily gift and +10. 
 - The team supplied the logo file on 2026-11-24. `SuperMaze/Assets/Materials/Logo/SuperMazeLogo.png` is that logo with its white background and drop shadow removed by code (Claude Code, Python/Pillow). Home uses its trimmed copy in HomeReferenceV2.
 - App icon files in the same folder (`AppIcon.png`, `AppIconBackground.png`, `AppIconForeground.png`) place the same logo on a cream background, made by Claude Code with Python/Pillow. They are set as the app icon in Player Settings.
 
+### Shop and level popup art: `SuperMaze/Assets/Art/ShopUI/`
+
+| Files | Source and processing |
+| ----- | --------------------- |
+| `ShopFront.png`, `Footwear.png`, `Lighting.png` | Cropped from the team-supplied ChatGPT Shop mock-up (`Super Maze shop UI_ boosts and upgrades (1).png`). The side art on the equipment cards has soft alpha edges. |
+| `Time.png` | Generated with the built-in OpenAI image tool from a prompt for a blue stopwatch with a gold crown, cream face, and coral hand on transparency. |
+| `Item.png` | Generated with the built-in OpenAI image tool from a prompt for a grocery checklist, red apple, and minus badge on transparency. |
+| `Shield.png` | Generated with the built-in OpenAI image tool from a prompt for a pearlescent bubble with a gold shield on transparency. |
+| `UpgradesRibbon.png` | Generated with the built-in OpenAI image tool using the Shop mock-up as the visual reference. Prompted for a blank sky-blue ribbon with folded ends and amber accent dashes on transparency, then cropped and resized for Unity. The UPGRADES label is editable TextMeshPro text. |
+
+The generated bonus icons were trimmed and resized by Codex. Home uses the same bonus icons in the Shop and the level popup.
+
 ### Fonts
 
 | Font | Path | Source | License |
@@ -85,3 +97,4 @@ The Home scene uses `YellowButton.png` from this folder for Daily gift and +10. 
 | `SuperMaze/Assets/Scripts/Game/PressHighlight.cs` | Claude Code (Anthropic, Claude Opus 5.5) | Yes |
 | `SuperMaze/Assets/Scripts/Game/UniformScaleFitter.cs` | Claude Code (Anthropic, Claude Opus 5.5) | Yes |
 | `SuperMaze/Assets/Scripts/Game/LevelNodeView.cs` | Claude Code (Anthropic, Claude Opus 5.5) | Yes |
+| `SuperMaze/Assets/Scripts/Game/HomeShopController.cs` | Codex (OpenAI) | Yes |
