@@ -8,5 +8,6 @@ public static class Services
     public static IConfigService Config { get; set; }
     public static IUpgradeService Upgrades { get; set; }
     public static IBoostService Boosts { get; set; }
+    public static ILifeService Lives { get; set; }
 }
 

@@ -87,6 +87,7 @@ The generated bonus icons were trimmed and resized by Codex. Home uses the same 
 
 | Font | Path | Source | License |
 | ---- | ---- | ------ | ------- |
+| Fredoka Bold (Home UI, including Settings, Shop, and the level popup) | `SuperMaze/Assets/Art/HomeFonts/` | The Fredoka Project Authors. Latin design by Milena Brandão. The source TTF is from the [upstream project](https://github.com/hafontia-zz/Fredoka-One). Codex created the TextMesh Pro SDF asset from that font. | SIL Open Font License 1.1. The bundled notice is `Resources/Fredoka-OFL.txt`. |
 | Roboto Bold (TextMesh Pro SDF asset) | `SuperMaze/Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Roboto-Bold SDF.asset` | Roboto by Google, bundled with Unity's TextMesh Pro "Examples & Extras" | Not verified here. Check the license notice shipped with TextMesh Pro before release. |
 | Liberation Sans (TextMesh Pro SDF asset) | `SuperMaze/Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset` | Bundled with Unity's TextMesh Pro Essential Resources | Not verified here. Check the license notice shipped with TextMesh Pro before release. |
 

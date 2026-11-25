@@ -23,6 +23,8 @@ public class Bootstrap : MonoBehaviour
             Services.Config.Economy
         );
 
+        Services.Lives = new LifeService(Services.Save, Services.Config.Economy);
+
         Debug.Log("Bootstrap: services ready");
 
         SceneManager.LoadScene("Home");

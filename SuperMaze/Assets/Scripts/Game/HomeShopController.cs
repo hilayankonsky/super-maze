@@ -24,11 +24,14 @@ public class HomeShopController : MonoBehaviour
     [SerializeField] Image upgradesTab;
     [SerializeField] Sprite selectedTab;
     [SerializeField] Sprite inactiveTab;
+    [SerializeField] Button lifePurchase;
     [SerializeField] TMP_Text lifePrice;
+    [SerializeField] TMP_Text lifePurchaseStatus;
     [SerializeField] Offer[] boostOffers;
     [SerializeField] Offer[] upgradeOffers;
 
     ISaveService subscribedSave;
+    float nextLivesRefresh;
 
     void OnEnable()
     {
@@ -37,6 +40,8 @@ public class HomeShopController : MonoBehaviour
         {
             subscribedSave.OnValueChanged += SavedValueChanged;
         }
+
+        RefreshLives();
     }
 
     void OnDisable()
@@ -45,6 +50,15 @@ public class HomeShopController : MonoBehaviour
         {
             subscribedSave.OnValueChanged -= SavedValueChanged;
             subscribedSave = null;
+        }
+    }
+
+    void Update()
+    {
+        if (Time.unscaledTime >= nextLivesRefresh)
+        {
+            nextLivesRefresh = Time.unscaledTime + 1f;
+            RefreshLives();
         }
     }
 
@@ -94,6 +108,15 @@ public class HomeShopController : MonoBehaviour
 
     public void BuyUpgrade(string id) => Services.Upgrades.TryUpgrade(id);
 
+    public void BuyLife()
+    {
+        if (shop.activeSelf && livesAndUpgrades.activeSelf)
+        {
+            Services.Lives.TryBuyLife();
+            RefreshLives();
+        }
+    }
+
     void SavedValueChanged(string key)
     {
         if (shop.activeSelf && (key == "coins" || key.StartsWith("boost_", StringComparison.Ordinal) ||
@@ -106,7 +129,7 @@ public class HomeShopController : MonoBehaviour
     void Refresh()
     {
         var economy = Services.Config.Economy;
-        lifePrice.text = economy.extraLifePrice.ToString();
+        RefreshLives();
         foreach (var offer in boostOffers)
         {
             offer.price.text = Services.Boosts.GetPrice(offer.id).ToString();
@@ -128,6 +151,19 @@ public class HomeShopController : MonoBehaviour
                 offer.progress[i].color = i < level ? new Color32(255, 200, 69, 255) : new Color32(143, 195, 216, 255);
             }
         }
+    }
+
+    void RefreshLives()
+    {
+        var lives = Services.Lives;
+        if (lives == null)
+        {
+            return;
+        }
+
+        lifePrice.text = lives.Price.ToString();
+        lifePurchaseStatus.text = $"Daily purchases: {lives.PurchasesToday}/{lives.DailyPurchaseLimit}";
+        lifePurchase.interactable = lives.CanBuyLife;
     }
 
     static string OfferEffect(string id, EconomyConfig economy, bool atCap)
