@@ -9,6 +9,20 @@ public static class LevelProgression
 
     public static int SelectedLevel { get; private set; } = 1;
 
+    private static int? pendingPopupLevel;
+
+    public static void RequestLevelPopup(int level)
+    {
+        pendingPopupLevel = level;
+    }
+
+    public static int? TakePendingPopupLevel()
+    {
+        int? level = pendingPopupLevel;
+        pendingPopupLevel = null;
+        return level;
+    }
+
     public static int BestStars(int level) => Mathf.Clamp(Services.Save?.GetInt(BestStarsKey(level)) ?? 0, 0, 3);
 
     public static bool IsUnlocked(int level) => level > 0 &&

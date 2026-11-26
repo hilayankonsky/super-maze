@@ -29,6 +29,13 @@ public class LevelPopupController : MonoBehaviour
     void Start()
     {
         Close();
+
+        int? pendingLevel = LevelProgression.TakePendingPopupLevel();
+
+        if (pendingLevel.HasValue)
+        {
+            Open(pendingLevel.Value);
+        }
     }
 
     public void Open(int levelNumber)

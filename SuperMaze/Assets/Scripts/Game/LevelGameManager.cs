@@ -9,6 +9,7 @@ public class LevelGameManager : MonoBehaviour
     [Header("Timer")]
     [SerializeField] private float levelDuration = 120f;
     [SerializeField] private TMP_Text timerText;
+    [SerializeField] private TMP_Text levelTitleText;
 
     [Header("End Game UI")]
     [SerializeField] private GameObject endGameOverlay;
@@ -25,11 +26,16 @@ public class LevelGameManager : MonoBehaviour
     private float timeRemaining;
     private bool gameEnded;
     private EconomyConfig economy;
-    [SerializeField] private int levelId = 1;
+    private int levelId;
 
     private void Start()
     {
         economy = Services.Config.Economy;
+
+        levelId = LevelProgression.SelectedLevel;
+
+        if (levelTitleText != null)
+            levelTitleText.text = $"LEVEL {levelId}";
 
         timeRemaining = levelDuration;
         gameEnded = false;
@@ -118,8 +124,8 @@ public class LevelGameManager : MonoBehaviour
         star3.SetActive(stars >= 3);
 
         // Load the best previous result
-        string levelKey = $"level_{levelId}_best_stars";
-        int bestStars = Services.Save.GetInt(levelKey, 0);
+        string levelKey = LevelProgression.BestStarsKey(levelId);
+        int bestStars = LevelProgression.BestStars(levelId);
 
         // Calculate the previous reward
         int previousReward = 0;
@@ -173,6 +179,15 @@ public class LevelGameManager : MonoBehaviour
     public void RetryLevel()
     {
         SceneManager.LoadScene("Level");
+    }
+
+    public void ContinueToNextLevel()
+    {
+        int nextLevel = levelId + 1;
+
+        LevelProgression.RequestLevelPopup(nextLevel);
+
+        SceneManager.LoadScene("Home");
     }
 
     public void GoHome()
