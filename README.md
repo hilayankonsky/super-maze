@@ -43,4 +43,4 @@ Race through a supermarket maze to collect your shopping list and reach the chec
 
 ## Economy Sheet
 
-![Link to the sheet:](https://docs.google.com/spreadsheets/d/16F01y5Ss_J4bYc2QLOovwGutLY_hx4dCfPBgnVCvnnE/edit?usp=sharing)
+Link to the sheet: https://docs.google.com/spreadsheets/d/16F01y5Ss_J4bYc2QLOovwGutLY_hx4dCfPBgnVCvnnE/edit?usp=sharing
