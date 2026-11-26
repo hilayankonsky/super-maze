@@ -6,6 +6,9 @@ using UnityEngine;
     menuName = "SuperMaze/Economy Config")]
 public class EconomyConfig : ScriptableObject
 {
+    [Header("Level Settings")]
+    public float levelDuration = 120f;
+
     [Header("Level Rewards")]
     public int oneStarReward = 40;
     public int twoStarReward = 80;

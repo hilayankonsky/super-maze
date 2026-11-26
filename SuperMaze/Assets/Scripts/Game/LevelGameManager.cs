@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class LevelGameManager : MonoBehaviour
 {
     [Header("Timer")]
-    [SerializeField] private float levelDuration = 120f;
+    private float levelDuration;
     [SerializeField] private TMP_Text timerText;
     [SerializeField] private TMP_Text levelTitleText;
 
@@ -31,6 +31,7 @@ public class LevelGameManager : MonoBehaviour
     private void Start()
     {
         economy = Services.Config.Economy;
+        levelDuration = economy.levelDuration;
 
         levelId = LevelProgression.SelectedLevel;
 
