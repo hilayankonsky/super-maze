@@ -18,6 +18,9 @@ MonoBehaviour:
   threeStarTime: 40
   twoStarTime: 80
   dailyReward: 50
+  maxLives: 3
+  lifeRegenerationSeconds: 600
+  dailyLifePurchaseLimit: 3
   extraLifePrice: 100
   extraTimePrice: 120
   defenseBubblePrice: 150

@@ -3,9 +3,14 @@ using System;
 public class LifeService : ILifeService
 {
     const string FullAtKey = "lives_full_at";
-    const string PurchaseRecordKey = "lives_daily_purchases";
+    const string SavedRecoveryIntervalKey = "lives_recovery_interval";
+    const string PurchaseDayKey = "lives_purchase_day";
+    const string PurchaseCountKey = "lives_purchase_count";
     const string CoinsKey = "coins";
-    const int RegenerationSeconds = 10 * 60;
+    // Legacy saves encoded a fixed recovery interval and four possible purchase counts per day.
+    const string LegacyPurchaseRecordKey = "lives_daily_purchases";
+    const int LegacyRecoveryInterval = 600;
+    const int LegacyPurchaseValuesPerDay = 4;
     static readonly DateTimeOffset SaveEpoch = new DateTimeOffset(2020, 1, 1, 0, 0, 0, TimeSpan.Zero);
 
     readonly ISaveService save;
@@ -19,20 +24,12 @@ public class LifeService : ILifeService
         this.utcNow = utcNow ?? (() => DateTimeOffset.UtcNow);
     }
 
-    public int MaxLives => 3;
-    public int DailyPurchaseLimit => 3;
+    public int MaxLives => Math.Max(1, economy.maxLives);
+    public int DailyPurchaseLimit => Math.Max(0, economy.dailyLifePurchaseLimit);
     public int Price => economy.extraLifePrice;
-    public int CurrentLives => MaxLives - MissingLives(RecoverySeconds(SecondsSinceEpoch()));
+    public int CurrentLives => MaxLives - ReadRecovery(SecondsSinceEpoch()).missing;
     public int PurchasesToday => PurchasesOn(UtcDay(SecondsSinceEpoch()));
-
-    public int SecondsUntilNextLife
-    {
-        get
-        {
-            int remaining = RecoverySeconds(SecondsSinceEpoch());
-            return remaining == 0 ? 0 : (remaining - 1) % RegenerationSeconds + 1;
-        }
-    }
+    public int SecondsUntilNextLife => ReadRecovery(SecondsSinceEpoch()).next;
 
     public bool CanBuyLife => CurrentLives < MaxLives && PurchasesToday < DailyPurchaseLimit &&
         save.GetInt(CoinsKey) >= Price;
@@ -40,17 +37,21 @@ public class LifeService : ILifeService
     public bool TryBuyLife()
     {
         int now = SecondsSinceEpoch();
-        int remaining = RecoverySeconds(now);
+        var recovery = ReadRecovery(now);
         int day = UtcDay(now);
         int purchases = PurchasesOn(day);
         int balance = save.GetInt(CoinsKey);
-        if (remaining == 0 || purchases >= DailyPurchaseLimit || balance < Price)
+        if (recovery.missing == 0 || purchases >= DailyPurchaseLimit || balance < Price)
         {
             return false;
         }
 
-        save.SetInt(FullAtKey, now + Math.Max(0, remaining - RegenerationSeconds));
-        save.SetInt(PurchaseRecordKey, day * (DailyPurchaseLimit + 1) + purchases + 1);
+        SaveRecovery(now, recovery.missing - 1, recovery.next);
+        save.SetInt(PurchaseCountKey, purchases + 1);
+        if (save.GetInt(PurchaseDayKey, -1) != day)
+        {
+            save.SetInt(PurchaseDayKey, day);
+        }
         save.SetInt(CoinsKey, balance - Price);
         return true;
     }
@@ -58,29 +59,62 @@ public class LifeService : ILifeService
     public bool TryLoseLife()
     {
         int now = SecondsSinceEpoch();
-        int remaining = RecoverySeconds(now);
-        if (MissingLives(remaining) >= MaxLives)
+        var recovery = ReadRecovery(now);
+        if (recovery.missing >= MaxLives)
         {
             return false;
         }
 
-        save.SetInt(FullAtKey, now + remaining + RegenerationSeconds);
+        SaveRecovery(now, recovery.missing + 1, recovery.next);
         return true;
     }
 
     // The time when the pool will be full also encodes the number of missing lives.
-    // Each missing life adds one interval, so unattended regeneration needs no writes.
-    int RecoverySeconds(int now) => Math.Clamp(save.GetInt(FullAtKey) - now, 0, MaxLives * RegenerationSeconds);
+    // Decode using the interval in effect when that deadline was written.
+    (int missing, int next) ReadRecovery(int now)
+    {
+        long remaining = (long)save.GetInt(FullAtKey) - now;
+        if (remaining <= 0)
+        {
+            return (0, 0);
+        }
 
-    static int MissingLives(int remaining) => (remaining + RegenerationSeconds - 1) / RegenerationSeconds;
+        int interval = Math.Max(1, save.GetInt(SavedRecoveryIntervalKey, LegacyRecoveryInterval));
+        int missing = (int)Math.Min(MaxLives, (remaining + interval - 1) / interval);
+        int next = (int)Math.Min(remaining - (missing - 1L) * interval, int.MaxValue);
+        return (missing, next);
+    }
+
+    void SaveRecovery(int now, int missing, int next)
+    {
+        if (missing == 0)
+        {
+            save.SetInt(FullAtKey, now);
+            return;
+        }
+
+        int interval = Math.Max(1, economy.lifeRegenerationSeconds);
+        int timeToNext = next > 0 ? Math.Min(next, interval) : interval;
+        long fullAt = (long)now + timeToNext + (missing - 1L) * interval;
+        if (save.GetInt(SavedRecoveryIntervalKey, LegacyRecoveryInterval) != interval)
+        {
+            save.SetInt(SavedRecoveryIntervalKey, interval);
+        }
+        save.SetInt(FullAtKey, (int)Math.Min(fullAt, int.MaxValue));
+    }
+
     int SecondsSinceEpoch() => (int)(utcNow() - SaveEpoch).TotalSeconds;
     static int UtcDay(int seconds) => seconds / (24 * 60 * 60);
 
-    // Store the UTC day and its count together to keep them in sync.
     int PurchasesOn(int day)
     {
-        int record = save.GetInt(PurchaseRecordKey);
-        int valuesPerDay = DailyPurchaseLimit + 1;
-        return record / valuesPerDay == day ? record % valuesPerDay : 0;
+        int savedDay = save.GetInt(PurchaseDayKey, -1);
+        if (savedDay >= 0)
+        {
+            return savedDay == day ? save.GetInt(PurchaseCountKey) : 0;
+        }
+
+        int record = save.GetInt(LegacyPurchaseRecordKey);
+        return record / LegacyPurchaseValuesPerDay == day ? record % LegacyPurchaseValuesPerDay : 0;
     }
 }

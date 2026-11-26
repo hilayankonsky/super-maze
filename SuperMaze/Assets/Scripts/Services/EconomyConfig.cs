@@ -21,6 +21,11 @@ public class EconomyConfig : ScriptableObject
     [Header("Daily Reward")]
     public int dailyReward = 50;
 
+    [Header("Lives")]
+    [Min(1)] public int maxLives = 3;
+    [Min(1)] public int lifeRegenerationSeconds = 600;
+    [Min(0)] public int dailyLifePurchaseLimit = 3;
+
     [Header("Boost Prices")]
     public int extraLifePrice = 100;
     public int extraTimePrice = 120;

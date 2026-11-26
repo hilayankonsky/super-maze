@@ -163,7 +163,7 @@ Life purchases:
 - ISaveService defines the saving interface: GetInt and SetInt.
 - PlayerPrefsSaveService implements ISaveService using PlayerPrefs.
 - Services exposes the active save service through Services.Save.
-- LifeService implements ILifeService and is exposed through Services.Lives. It persists regeneration and the daily purchase count through ISaveService. Lives regenerate one at a time every 10 minutes, up to 3. Extra Life uses EconomyConfig.extraLifePrice and a limit of 3 purchases per UTC day.
+- LifeService implements ILifeService and is exposed through Services.Lives. It persists regeneration and the daily purchase count through ISaveService. EconomyConfig provides maxLives (3), lifeRegenerationSeconds (600), dailyLifePurchaseLimit (3 per UTC day), and extraLifePrice. Pending recovery deadlines use their saved interval when read, and existing saves use the original encoding until the next relevant write.
 - All game, screen and UI code must access saved data through Services.Save, never PlayerPrefs directly.
 - Direct PlayerPrefs access belongs only inside PlayerPrefsSaveService.
 - CoinCounter displays and updates the persistent saved coin count.
