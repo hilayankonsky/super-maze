@@ -40,3 +40,7 @@ Race through a supermarket maze to collect your shopping list and reach the chec
 ## Architecture Diagram
 
 ![Super Maze Architecture Diagram](media/architecture-diagram.png)
+
+##Economy Sheet
+
+[Link to the sheet: https://docs.google.com/spreadsheets/d/16F01y5Ss_J4bYc2QLOovwGutLY_hx4dCfPBgnVCvnnE/edit?usp=sharing]
