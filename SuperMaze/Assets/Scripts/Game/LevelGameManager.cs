@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LevelGameManager : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class LevelGameManager : MonoBehaviour
     private bool gameEnded;
     private EconomyConfig economy;
     private int levelId;
+    private Button retryButton;
+    private float nextRetryRefresh;
+
+    private bool CanRetry => Services.Lives != null && Services.Lives.CurrentLives > 0;
 
     private void Start()
     {
@@ -44,6 +49,7 @@ public class LevelGameManager : MonoBehaviour
         winPanel.SetActive(false);
         losePanel.SetActive(false);
         endGameOverlay.SetActive(false);
+        retryButton = losePanel.transform.Find("RetryButton")?.GetComponent<Button>();
 
         UpdateTimerText();
     }
@@ -51,7 +57,13 @@ public class LevelGameManager : MonoBehaviour
     private void Update()
     {
         if (gameEnded)
+        {
+            if (losePanel.activeSelf && Time.unscaledTime >= nextRetryRefresh)
+            {
+                RefreshRetryButton();
+            }
             return;
+        }
 
         timeRemaining -= Time.deltaTime;
 
@@ -172,6 +184,8 @@ public class LevelGameManager : MonoBehaviour
             return;
 
         gameEnded = true;
+        Services.Lives?.TryLoseLife();
+        RefreshRetryButton();
 
         endGameOverlay.SetActive(true);
         losePanel.SetActive(true);
@@ -179,7 +193,19 @@ public class LevelGameManager : MonoBehaviour
 
     public void RetryLevel()
     {
-        SceneManager.LoadScene("Level");
+        if (CanRetry)
+        {
+            SceneManager.LoadScene("Level");
+        }
+    }
+
+    private void RefreshRetryButton()
+    {
+        nextRetryRefresh = Time.unscaledTime + 1f;
+        if (retryButton != null)
+        {
+            retryButton.interactable = CanRetry;
+        }
     }
 
     public void ContinueToNextLevel()

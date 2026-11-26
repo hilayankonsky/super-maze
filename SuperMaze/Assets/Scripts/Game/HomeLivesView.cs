@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(TMP_Text))]
 public class HomeLivesView : MonoBehaviour
 {
+    [SerializeField] TMP_Text limitLabel;
+
     TMP_Text label;
     ISaveService subscribedSave;
     float nextRefresh;
@@ -15,6 +17,11 @@ public class HomeLivesView : MonoBehaviour
         if (subscribedSave != null)
         {
             subscribedSave.OnValueChanged += SavedValueChanged;
+        }
+
+        if (limitLabel != null && Services.Lives != null)
+        {
+            limitLabel.text = $"/{Services.Lives.MaxLives}";
         }
 
         Refresh();
@@ -45,7 +52,7 @@ public class HomeLivesView : MonoBehaviour
         var lives = Services.Lives;
         if (lives != null)
         {
-            label.text = $"{lives.CurrentLives}/{lives.MaxLives}";
+            label.text = lives.CurrentLives.ToString();
         }
     }
 }
