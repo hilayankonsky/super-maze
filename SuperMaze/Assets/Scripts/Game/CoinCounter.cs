@@ -1,18 +1,40 @@
-// CoinCounter.cs (Assets/Scripts/Game): on your coin text in the HUD
+
 using TMPro;
 using UnityEngine;
 
 public class CoinCounter : MonoBehaviour
 {
-    [SerializeField] TMP_Text label;         // drag your coin text here
+    [SerializeField] TMP_Text label;
 
-    void Start() => Show();
-
-    public void Add(int amount)              // a button: On Click () → CoinCounter.Add, 10
+    private void OnEnable()
     {
-        Services.Save.SetInt("coins", Services.Save.GetInt("coins") + amount);
+        Services.Save.OnValueChanged += HandleValueChanged;
         Show();
     }
 
-    void Show() => label.text ="Coins: " + Services.Save.GetInt("coins").ToString();
+    private void OnDisable()
+    {
+        Services.Save.OnValueChanged -= HandleValueChanged;
+    }
+
+    private void HandleValueChanged(string key)
+    {
+        if (key == "coins")
+        {
+            Show();
+        }
+    }
+
+    public void Add(int amount)
+    {
+        Services.Save.SetInt(
+            "coins",
+            Services.Save.GetInt("coins") + amount
+        );
+    }
+
+    private void Show()
+    {
+        label.text = Services.Save.GetInt("coins").ToString();
+    }
 }

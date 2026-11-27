@@ -299,36 +299,55 @@ PlayerSettings:
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 4dbdb3b7a8bc55942b31ba141875266d, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: Android
     m_Icons:
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 432
       m_Height: 432
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 324
       m_Height: 324
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 216
       m_Height: 216
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 162
       m_Height: 162
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 108
       m_Height: 108
       m_Kind: 2
       m_SubKind: 
-    - m_Textures: []
+    - m_Textures:
+      - {fileID: 2800000, guid: 1a93a2d5d824b1b4daabb22cb6dcee55, type: 3}
+      - {fileID: 2800000, guid: 876737bb81844714eb0cfd062481cb6b, type: 3}
       m_Width: 81
       m_Height: 81
       m_Kind: 2
@@ -454,6 +473,9 @@ PlayerSettings:
   - serializedVersion: 3
     m_BuildTarget: Android
     m_Formats: 01000000i
+  - serializedVersion: 3
+    m_BuildTarget: iOS
+    m_Formats: 03000000i
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
